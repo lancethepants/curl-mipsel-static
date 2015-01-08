@@ -42,9 +42,9 @@ make install DESTDIR=$BASE
 ########### #################################################################
 
 mkdir -p $SRC/openssl && cd $SRC/openssl
-$WGET http://www.openssl.org/source/openssl-1.0.1j.tar.gz
-tar zxvf openssl-1.0.1j.tar.gz
-cd openssl-1.0.1j
+$WGET http://www.openssl.org/source/openssl-1.0.1k.tar.gz
+tar zxvf openssl-1.0.1k.tar.gz
+cd openssl-1.0.1k
 
 cat << "EOF" > openssl.patch
 --- Configure_orig      2013-11-19 11:32:38.755265691 -0700
@@ -75,9 +75,9 @@ make install CC=mipsel-linux-gcc AR="mipsel-linux-ar r" RANLIB=mipsel-linux-ranl
 ######## ####################################################################
 
 mkdir -p $SRC/curl && cd $SRC/curl
-$WGET http://curl.haxx.se/download/curl-7.39.0.tar.gz
-tar zxvf curl-7.39.0.tar.gz
-cd curl-7.39.0
+$WGET http://curl.haxx.se/download/curl-7.40.0.tar.gz
+tar zxvf curl-7.40.0.tar.gz
+cd curl-7.40.0
 
 LDFLAGS=$LDFLAGS \
 CPPFLAGS=$CPPFLAGS \
